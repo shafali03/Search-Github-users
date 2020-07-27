@@ -1,11 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Form = (props) => {
+  const [username, setUsername] = useState('')
+
+  const handleSubmit = (event) => {
+    event.preventDefault()
+    alert(username)
+  }
 
   return (
-    <form className='w-full max-w-sm mx-auto' data-test='component-search-box'>
+    <form
+      onSubmit={handleSubmit}
+      className='w-full max-w-sm mx-auto' data-test='component-search-box'>
       <div className='mt-10 flex'>
         <input
+          value={username}
+          onChange={(event) => setUsername(event.target.value)}
           data-test='input-value'
           type='text'
           placeholder='Github username'
