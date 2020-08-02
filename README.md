@@ -7,3 +7,10 @@ I have created an application which allows you to search for GitHub users and di
 
 [Live demo](https://search-github-users-app.netlify.app/)
 
+
+## Tech Used
+
+React
+Github API
+Jest
+Circle CI
